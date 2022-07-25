@@ -1,6 +1,7 @@
 /* Center child elements */
 h6,
-.website-counter {
+.pg-counter, 
+.like-counter {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -12,7 +13,7 @@ h6 {
 }
 
 /* Styles for website counter container */
-.website-counter {
+.pg-counter {
   background-color: #f5e5a3;
   height: 50px;
   width: 80px;
