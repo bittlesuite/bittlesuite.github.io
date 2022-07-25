@@ -2,13 +2,13 @@
 h6,
 .website-counter {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  /* justify-content: center; */
+  align-items: center;
   flex-direction: column;
 }
 
 h6 {
-  height: 300vh;
+  height: 100vh;
 }
 
 /* Styles for website counter container */
