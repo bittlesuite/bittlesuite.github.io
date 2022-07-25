@@ -1,5 +1,5 @@
 /* Center child elements */
-/* body,
+body,
 .website-counter {
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@
 
 body {
   height: 100vh;
-} */
+}
 
 /* Styles for website counter container */
 .website-counter {
