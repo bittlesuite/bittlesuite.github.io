@@ -25,8 +25,8 @@ resetButton.addEventListener("click", () => {
 
 /// for like counter ---
 var clicks = 0;
-document.getElementById("demo").innerHTML = clicks;
+document.getElementById("like").innerHTML = clicks;
 function myFunction() {
     clicks += 1;
-    document.getElementById("demo").innerHTML = clicks;
+    document.getElementById("like").innerHTML = clicks;
 }

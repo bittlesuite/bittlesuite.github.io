@@ -23,8 +23,8 @@ h6 {
   margin-top: 10px;
 }
 
-/* Styles for reset button */
-#reset {
+/* Styles for reset & demo button */
+#reset, #like {
   margin-top: 20px;
   background-color: #008cba;
   cursor: pointer;
