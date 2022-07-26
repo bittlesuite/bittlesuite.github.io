@@ -30,10 +30,11 @@ openFile=fopen(getFilePath(),0);
 var readString = fread(openFile,flength(file)) ;
 document.getElementById("like").innerHTML = readString;
 function myFunction() {
+    openFile=fopen(getFilePath(), 0);
     var read = fread(openFile,flength(file)) ;
     read = int(read) + 1 ;
 
-    editFile = fopen("likecnt.txt", 3);// opens the file for writing
+    editFile = fopen("C:cygwin/home/aditi/bittlesuite.github.io/likecnt.txt", 3);// opens the file for writing
     fwrite(file, read);// str is the content that is to be written into the file.
 
     document.getElementById("like").innerHTML = read;
