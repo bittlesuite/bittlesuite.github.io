@@ -33,8 +33,9 @@ for (let i = 0; i < INPUT_LEN-1; i++) {
 
 console.log(rightGuessString)
 
-  // giving string of game play - IN PROGRESS
-  document.getElementById("game").innerHTML = "this is a sharable game!";
+//giving string of game play 
+document.getElementById("game").innerHTML = "";
+var game_play = "" ;
 
 initBoard()
 
@@ -157,6 +158,7 @@ function checkGuess () {
 
         if (currentGuess[i] == rightGuess[i]) {
             letterColor = correctColor
+            game_play += String.fromCodePoint(0x1F7E9);
         } else {
             let flag1 = false ;
             for (let m = i+1; m < INPUT_LEN; m++) {
@@ -166,8 +168,10 @@ function checkGuess () {
             }
             if(flag1) {
                 letterColor = semiCorrectColor
+                game_play += String.fromCodePoint(0x1F7E8);
             } else {
                 letterColor = incorrectColor 
+                game_play += String.fromCodePoint(0x2B1C);
             }
         }
 
@@ -181,6 +185,8 @@ function checkGuess () {
         }, delay)
     }
 
+    game_play += "\n";
+
     if (guessString === rightGuessString) {
         if (guessesRemaining == 4) {
             toastr.success("Insane!")
@@ -193,7 +199,7 @@ function checkGuess () {
         }
           
         // giving string of game play - IN PROGRESS
-        document.getElementById("game").innerHTML = "sharing my win!";
+        document.getElementById("game").innerHTML = "win\n" + game_play;
         toastr.success("win!")
 
         guessesRemaining = 0
@@ -210,7 +216,7 @@ function checkGuess () {
             )
 
             // giving string of game play - IN PROGRESS
-            document.getElementById("game").innerHTML = "sharing my loss!";
+            document.getElementById("game").innerHTML = "loss\n" + game_play;
 
         }
     }
