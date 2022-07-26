@@ -188,8 +188,10 @@ function checkGuess () {
         } else if (guessesRemaining == 1) {
             toastr.success("Phew!")
         }
-        
         guessesRemaining = 0
+
+        // giving string of game play - IN PROGRESS
+        document.getElementById("game").innerHTML = "this is a sharable game!";
         return
     } else {
         guessesRemaining -= 1;
