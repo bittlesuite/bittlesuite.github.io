@@ -275,6 +275,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 // https://stackoverflow.com/questions/47931843/javascript-copy-to-clipboard-not-working
 //If you want to copyText from Element
 function copyTextFromElement(elementID) {
+    alert('c text from element');
     let element = document.getElementById(elementID); //select the element
     let elementText = element.textContent; //get the text content from the element
     copyText(elementText); //use the copyText function below
@@ -283,6 +284,7 @@ function copyTextFromElement(elementID) {
 //If you only want to put some Text in the Clipboard just use this function
 // and pass the string to copied as the argument.
 function copyText(text) {
+    alert('c text');
     navigator.clipboard.writeText(text);
     toastr.success("copied!")
 }
