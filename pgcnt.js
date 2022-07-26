@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+// import * as fs from 'fs';
 
 var counterContainer = document.querySelector(".pg-counter");
 var resetButton = document.querySelector("#reset");
@@ -40,20 +40,20 @@ resetButton.addEventListener("click", () => {
 
 /// for like counter ---
 
-openFile=fopen(getFilePath(),0);
+// openFile=fopen(getFilePath(),0);
 
-var readString = fread(openFile,flength(file)) ;
-document.getElementById("like").innerHTML = readString;
-function myFunction() {
-    openFile=fopen(getFilePath(), 0);
-    var read = fread(openFile,flength(file)) ;
-    read = int(read) + 1 ;
+// var readString = fread(openFile,flength(file)) ;
+// document.getElementById("like").innerHTML = readString;
+// function myFunction() {
+//     openFile=fopen(getFilePath(), 0);
+//     var read = fread(openFile,flength(file)) ;
+//     read = int(read) + 1 ;
 
-    editFile = fopen("C:cygwin/home/aditi/bittlesuite.github.io/likecnt.txt", 3);// opens the file for writing
-    fwrite(file, read);// str is the content that is to be written into the file.
+//     editFile = fopen("C:cygwin/home/aditi/bittlesuite.github.io/likecnt.txt", 3);// opens the file for writing
+//     fwrite(file, read);// str is the content that is to be written into the file.
 
-    document.getElementById("like").innerHTML = read;
-}
+//     document.getElementById("like").innerHTML = read;
+// }
 
 // https://www.thecrazyprogrammer.com/2019/12/javascript-read-and-write-to-text-file.html
 
