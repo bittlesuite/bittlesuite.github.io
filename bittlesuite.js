@@ -35,7 +35,7 @@ console.log(rightGuessString)
 
 //giving string of game play 
 document.getElementById("game").innerHTML = "";
-var game_play = "" ;
+var game_play = "Share your game! <br/>" ;
 if (mode == 1) {
     game_play += "bittle! <br/>" ;
 } else if (mode == 4) {
