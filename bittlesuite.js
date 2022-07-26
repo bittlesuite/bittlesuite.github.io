@@ -207,7 +207,7 @@ function checkGuess () {
           
         // giving string of game play - IN PROGRESS
         document.getElementById("game").innerHTML = 
-            "win :) @ " 
+            "win 😊 @ " 
             + game_play
             + "https://bittlesuite.github.io";
 
@@ -226,7 +226,7 @@ function checkGuess () {
 
             // giving string of game play - IN PROGRESS
             document.getElementById("game").innerHTML = 
-                "loss :( @ " 
+                "loss ☹️ @ " 
                 + game_play
                 + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a>";
 
