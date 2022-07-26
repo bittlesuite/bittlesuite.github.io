@@ -228,7 +228,7 @@ function checkGuess () {
             document.getElementById("game").innerHTML = 
                 "loss :( @ " 
                 + game_play
-                + "https://bittlesuite.github.io";
+                + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a>";
 
         }
     }
