@@ -6,6 +6,17 @@ var visitCount = localStorage.getItem("page_view");
 if (visitCount) {
     visitCount = Number(visitCount) + 1;
     localStorage.setItem("page_view", visitCount);
+
+    // write to js file
+    const fs = require('fs')
+    const content = 'bittle suite home page visited!'
+    fs.writeFile('/cygwin/home/Aditi/bittlesuite.github.io/likecnt.txt', content, err => {
+    if (err) {
+        console.error(err)
+        return
+    }
+    //file written successfully
+})
 } else {
     visitCount = 1;
     localStorage.setItem("page_view", 1);
