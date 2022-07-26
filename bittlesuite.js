@@ -33,6 +33,9 @@ for (let i = 0; i < INPUT_LEN-1; i++) {
 
 console.log(rightGuessString)
 
+  // giving string of game play - IN PROGRESS
+  document.getElementById("game").innerHTML = "this is a sharable game!";
+
 initBoard()
 
 document.addEventListener("keyup", (e) => {
@@ -190,8 +193,6 @@ function checkGuess () {
         }
         guessesRemaining = 0
 
-        // giving string of game play - IN PROGRESS
-        document.getElementById("game").innerHTML = "this is a sharable game!";
         return
     } else {
         guessesRemaining -= 1;
