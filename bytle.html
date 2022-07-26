@@ -46,10 +46,11 @@
 </script>
 
 <div>
-  <p id="p1">P1: I am paragraph 1</p>
-  <button onclick="copyToClipboard('p1')">Copy P1</button>
+  <div id="mytext">This is some text that needs to be copied</div>
+  <button onclick="copyTextFromElement('mytext')">Copy random</button>
+
   <p id="game"></p>
-  <button onclick="copyToClipboard('game')">Copy game</button>
+  <button onclick="copyText('game')">Copy game</button>
 
 </div>
 
@@ -69,4 +70,3 @@
   p {color:rgb(244, 205, 241);}
 </style>
 
-<!-- citation for "copy" instructions: https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard -->
