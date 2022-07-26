@@ -36,7 +36,6 @@ console.log(rightGuessString)
 //giving string of game play 
 document.getElementById("game").innerHTML = "";
 var game_play = "" ;
-game_play += "Share your game! <br/>" ;
 if (mode == 1) {
     game_play += "bittle! <br/>" ;
 } else if (mode == 4) {
@@ -210,7 +209,8 @@ function checkGuess () {
         document.getElementById("game").innerHTML = 
             "win 😊 @ " 
             + game_play
-            + "https://bittlesuite.github.io";
+            + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+            + "share your game by copying the above text!";
 
         guessesRemaining = 0
         return
@@ -229,7 +229,8 @@ function checkGuess () {
             document.getElementById("game").innerHTML = 
                 "loss ☹️ @ " 
                 + game_play
-                + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a>";
+                + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+                + "share your game by copying the above text!";
 
         }
     }
