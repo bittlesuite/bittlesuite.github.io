@@ -39,6 +39,12 @@ function myFunction() {
     document.getElementById("like").innerHTML = read;
 }
 
+// https://www.thecrazyprogrammer.com/2019/12/javascript-read-and-write-to-text-file.html
+
+
+/// OLD
+
+
 /*
 var clicks = 0;
 document.getElementById("like").innerHTML = clicks;
@@ -47,3 +53,5 @@ function myFunction() {
     document.getElementById("like").innerHTML = clicks;
 }
 */
+
+// https://stackoverflow.com/questions/22402777/html-javascript-button-click-counter
