@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 var counterContainer = document.querySelector(".pg-counter");
 var resetButton = document.querySelector("#reset");
 var visitCount = localStorage.getItem("page_view");
