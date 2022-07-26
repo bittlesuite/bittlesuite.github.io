@@ -7,7 +7,7 @@ var likeCount = localStorage.getItem("like-cnt");
 
 likeCount = 1;
 localStorage.setItem("like-cnt", 1);
-counterContainer.innerHTML = likeCount;
+likeContainer.innerHTML = likeCount;
 
 
 // Adding onClick event listener
