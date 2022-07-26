@@ -19,4 +19,13 @@ resetButton.addEventListener("click", () => {
     counterContainer.innerHTML = visitCount;
 });
 
+
 //https://contactmentor.com/build-website-visitor-counter-javascript/
+
+
+/// for like counter ---
+var clicks = 0;
+function myFunction() {
+    clicks += 1;
+    document.getElementById("demo").innerHTML = clicks;
+}

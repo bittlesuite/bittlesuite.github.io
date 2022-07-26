@@ -1,7 +1,6 @@
 /* Center child elements */
 h6,
-.pg-counter, 
-.like-counter {
+.pg-counter {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -15,18 +14,6 @@ h6 {
 /* Styles for website counter container */
 .pg-counter {
   background-color: #f5e5a3;
-  height: 50px;
-  width: 80px;
-  color: rgb(0, 0, 0);
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 10px;
-}
-
-/* Styles for like counter container */
-.like-counter {
-  background-color: #f98ff0;
   height: 50px;
   width: 80px;
   color: rgb(0, 0, 0);
