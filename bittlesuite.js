@@ -282,10 +282,10 @@ function myFunction() {
     // copyText.setSelectionRange(0, 99999); /* For mobile devices */
   
      /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
+    navigator.clipboard.writeText(copyText);
   
     /* Alert the copied text */
-    toastr.success("Copied the text: " + copyText.value);
+    toastr.success("Copied the text: " + copyText);
 }
 
 
