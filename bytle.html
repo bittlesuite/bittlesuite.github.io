@@ -46,8 +46,11 @@
 </script>
 
 <div>
-  <button onclick="myFunction()">Copy game</button>
+  <p id="p1">P1: I am paragraph 1</p>
+  <button onclick="copyToClipboard('p1')">Copy P1</button>
   <p id="game"></p>
+  <button onclick="copyToClipboard('game')">Copy game</button>
+
 </div>
 
 <p style="color:#F2F5FC">How to play: 8 bits make a byte! Enter 0's and 1's. <br>
@@ -66,4 +69,4 @@
   p {color:rgb(244, 205, 241);}
 </style>
 
-<!-- citation for "copy" instructions: https://www.w3schools.com/howto/howto_js_copy_clipboard.asp -->
+<!-- citation for "copy" instructions: https://stackoverflow.com/questions/22581345/click-button-copy-to-clipboard -->
