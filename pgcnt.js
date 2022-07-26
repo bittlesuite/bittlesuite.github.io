@@ -10,9 +10,9 @@ if (visitCount) {
     localStorage.setItem("page_view", visitCount);
 
     // write to js file
-    const fs = require('fs')
-    const content = 'bittle suite home page visited!'
-    fs.writeFile('/cygwin/home/Aditi/bittlesuite.github.io/likecnt.txt', content, err => {
+    const fs = require("fs")
+    const content = "bittle suite home page visited!"
+    fs.writeFile("/cygwin/home/Aditi/bittlesuite.github.io/likecnt.txt", content, err => {
     if (err) {
         console.error(err)
         return
