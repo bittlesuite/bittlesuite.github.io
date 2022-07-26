@@ -36,6 +36,13 @@ console.log(rightGuessString)
 //giving string of game play 
 document.getElementById("game").innerHTML = "";
 var game_play = "" ;
+if (mode == 1) {
+    game_play += "bittle! <br/>" ;
+} else if (mode == 4) {
+    game_play += "nibble! <br/>" ;
+} else {//if (mode == 8) 
+    game_play += "bytle! <br/>" ;
+}
 
 initBoard()
 
@@ -199,8 +206,10 @@ function checkGuess () {
         }
           
         // giving string of game play - IN PROGRESS
-        document.getElementById("game").innerHTML = "win\n" + game_play;
-        toastr.success("win!")
+        document.getElementById("game").innerHTML = 
+            "win :)\n" 
+            + game_play
+            + "https://bittlesuite.github.io";
 
         guessesRemaining = 0
         return
@@ -216,7 +225,10 @@ function checkGuess () {
             )
 
             // giving string of game play - IN PROGRESS
-            document.getElementById("game").innerHTML = "loss\n" + game_play;
+            document.getElementById("game").innerHTML = 
+                "loss :(\n" 
+                + game_play
+                + "https://bittlesuite.github.io";
 
         }
     }
