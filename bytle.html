@@ -51,6 +51,12 @@
 
   <p id="game"></p>
   <button onclick='copyText("game")'>Copy game</button>
+  <script>
+    function copyText(text) {
+      alert('c text');
+      navigator.clipboard.writeText(text);
+    }
+  </script>
 
   <!-- https://stackoverflow.com/questions/42530261/javascript-button-onclick-not-working -->
   <button onclick="hello()">Hello</button>

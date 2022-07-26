@@ -283,11 +283,11 @@ function copyTextFromElement(elementID) {
   
 //If you only want to put some Text in the Clipboard just use this function
 // and pass the string to copied as the argument.
-function copyText(text) {
-    alert('c text');
-    navigator.clipboard.writeText(text);
-    toastr.success("copied!")
-}
+// function copyText(text) {
+//     alert('c text');
+//     navigator.clipboard.writeText(text);
+//     toastr.success("copied!")
+// }
 
 //////////////////////////////////////old logic in "checkGuess()" for loop
 
