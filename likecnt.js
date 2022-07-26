@@ -3,11 +3,7 @@
 
 
 
-var clicks = 0;
-function likeCounter() {
-    clicks += 1;
-    document.getElementById("demo").innerHTML = clicks;
-}
+
 
 // openFile=fopen(getFilePath(),0);
 
