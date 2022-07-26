@@ -194,7 +194,8 @@ function checkGuess () {
           
         // giving string of game play - IN PROGRESS
         document.getElementById("game").innerHTML = "sharing my win!";
-        
+        toastr.success("win!")
+
         guessesRemaining = 0
         return
     } else {
@@ -207,8 +208,10 @@ function checkGuess () {
                 "You've run out of guesses!" + 
                 `The correct byte was: "${rightGuessString}"`
             )
+
             // giving string of game play - IN PROGRESS
             document.getElementById("game").innerHTML = "sharing my loss!";
+
         }
     }
 }
