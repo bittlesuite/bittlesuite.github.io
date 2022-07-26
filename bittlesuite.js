@@ -185,7 +185,7 @@ function checkGuess () {
         }, delay)
     }
 
-    game_play += "\n";
+    game_play += "<br/>";
 
     if (guessString === rightGuessString) {
         if (guessesRemaining == 4) {
