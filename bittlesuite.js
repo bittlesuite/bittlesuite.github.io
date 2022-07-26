@@ -207,7 +207,7 @@ function checkGuess () {
           
         // giving string of game play - IN PROGRESS
         document.getElementById("game").innerHTML = 
-            "win :)\n" 
+            "win :) @ " 
             + game_play
             + "https://bittlesuite.github.io";
 
@@ -226,7 +226,7 @@ function checkGuess () {
 
             // giving string of game play - IN PROGRESS
             document.getElementById("game").innerHTML = 
-                "loss :(\n" 
+                "loss :( @ " 
                 + game_play
                 + "https://bittlesuite.github.io";
 
