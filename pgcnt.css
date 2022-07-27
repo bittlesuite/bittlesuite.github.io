@@ -14,12 +14,12 @@ h6 {
 /* Styles for website counter container */
 .pg-counter, #like {
   background-color: #f5e5a3;
-  height: 25px;
-  width: 40px;
+  height: 35px;
+  width: 50px;
   color: rgb(0, 0, 0);
   border-radius: 15px;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 450;
+  font-size: 14px;
   margin-top: 5px;
 }
 
