@@ -12,6 +12,8 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script defer src="pgcnt.js"></script>
+    <link rel="stylesheet" href="pgcnt.css"/>
 </head>
     <body style="background-color:#543B6E">
         <nav>
@@ -19,6 +21,11 @@
             &bull;
             <a href="bittle">Play Again</a>
         </nav>
+
+        <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+            <h3 style="color:rgb(194, 239, 239)">My bittle count:</h3>
+            <div class="pg-counter"></div>
+        </div>
 
         <h1> Bittle Suite </h1>
         <h2> Bittle </h2>
@@ -53,13 +60,6 @@
             <a style="color:darkseagreen">green: correct bit, correct placement</a><br>
             <a style="color:lightgrey">grey: bit not in answer </a><br>
         </p>
-
-        <script defer src="pgcnt.js"></script>
-        <link rel="stylesheet" href="pgcnt.css"/>
-        <div>
-            <h3 style="color:rgb(194, 239, 239)">My bittle count:</h3>
-            <div class="pg-counter"></div>
-        </div>
 
     </body>
 
