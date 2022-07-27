@@ -13,54 +13,59 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 </head>
-<body style="background-color:#543B6E">
+  <body style="background-color:#543B6E">
 
-<nav>
-    <a href="index">Home</a>
-    &bull;
-    <a href="bytle">Play Again</a>
-</nav>
+  <nav>
+      <a href="index">Home</a>
+      &bull;
+      <a href="bytle">Play Again</a>
+  </nav>
 
-    <h1> Bittle Suite </h1>
-    <h2> Bytle </h2>
+      <h1> Bittle Suite </h1>
+      <h2> Bytle </h2>
+      
+      <div id="game-board" style="color:#F2F5FC"></div>
     
-    <div id="game-board" style="color:#F2F5FC"></div>
-  
-    <div id="keyboard-cont" >
-      <div class="first-row">
-          <button class="keyboard-button">Del</button>
-          <button class="keyboard-button">0</button>
-          <button class="keyboard-button">1</button>
-          <button class="keyboard-button">Enter</button>
+      <div id="keyboard-cont" >
+        <div class="first-row">
+            <button class="keyboard-button">Del</button>
+            <button class="keyboard-button">0</button>
+            <button class="keyboard-button">1</button>
+            <button class="keyboard-button">Enter</button>
+        </div>
       </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="bittlesuite.js" type="module" data=8
+      href="#" id="bittlesuite">
+    </script>
+
+    <div>
+      <!-- <div id="mytext">This is some text that needs to be copied</div>
+      <button onclick='copyTextFromElement("mytext")''>Copy random</button> -->
+
+      <p id="game"></p>
+      <!-- <button onclick='copyText()'>Copy game</button> -->
+
     </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="bittlesuite.js" type="module" data=8
-  href="#" id="bittlesuite">
-</script>
+    <p style="color:#F2F5FC">How to play: 8 bits make a byte! Enter 0's and 1's. <br>
+      Hint: square colorings may obfuscate! <br>
+      <a style="color:darkseagreen">green: correct bit, correct placement</a><br>
+      <a style="color:lightcoral">pink: correct bit, incorrect placement </a><br>
+      <a style="color:lightgrey">grey: bit not in byte </a><br>
+    </p>
 
-<div>
-  <!-- <div id="mytext">This is some text that needs to be copied</div>
-  <button onclick='copyTextFromElement("mytext")''>Copy random</button> -->
-
-  <p id="game"></p>
-  <!-- <button onclick='copyText()'>Copy game</button> -->
-
-</div>
-
-<p style="color:#F2F5FC">How to play: 8 bits make a byte! Enter 0's and 1's. <br>
-  Hint: square colorings may obfuscate! <br>
-  <a style="color:darkseagreen">green: correct bit, correct placement</a><br>
-  <a style="color:lightcoral">pink: correct bit, incorrect placement </a><br>
-  <a style="color:lightgrey">grey: bit not in byte </a><br>
-</p>
-</body>
+    <div>
+      <h3 style="color:rgb(194, 239, 239)">My bytle play count:</h3>
+      <div class="pg-counter"></div>
+    </div>
+  </body>
 </html>
 
 <style>
