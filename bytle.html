@@ -11,7 +11,9 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    />
+    <script defer src="pgcnt.js"></script>
+    <link rel="stylesheet" href="pgcnt.css"/>
 </head>
   <body style="background-color:#543B6E">
 
@@ -20,6 +22,9 @@
       &bull;
       <a href="bytle">Play Again</a>
   </nav>
+  <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+    <div class="pg-counter"></div>
+  </div>
 
       <h1> Bittle Suite </h1>
       <h2> Bytle </h2>
@@ -48,7 +53,6 @@
     <div>
       <!-- <div id="mytext">This is some text that needs to be copied</div>
       <button onclick='copyTextFromElement("mytext")''>Copy random</button> -->
-
       <p id="game"></p>
       <!-- <button onclick='copyText()'>Copy game</button> -->
 
@@ -61,12 +65,6 @@
       <a style="color:lightgrey">grey: bit not in byte </a><br>
     </p>
 
-    <script defer src="pgcnt.js"></script>
-    <link rel="stylesheet" href="pgcnt.css"/>
-    <div>
-      <h3 style="color:rgb(194, 239, 239)">My bytle play count:</h3>
-      <div class="pg-counter"></div>
-    </div>
   </body>
 </html>
 
