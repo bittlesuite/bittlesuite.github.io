@@ -207,9 +207,11 @@ function checkGuess () {
           
         // giving string of game play - IN PROGRESS
         document.getElementById("game").innerHTML = 
-            "win 😊 @ " 
+            "<div style=\"background-color:black\">"
+            + "win 😊 @ " 
             + game_play
             + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+            + "</div>"
             + "share your game by copying the above text!";
 
         guessesRemaining = 0
@@ -227,9 +229,11 @@ function checkGuess () {
 
             // giving string of game play - IN PROGRESS
             document.getElementById("game").innerHTML = 
-                "loss ☹️ @ " 
+                "<div style=\"background-color:black\">"
+                + "loss ☹️ @ " 
                 + game_play
                 + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+                + "</div>"
                 + "share your game by copying the above text!";
 
         }
