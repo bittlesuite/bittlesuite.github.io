@@ -7,10 +7,13 @@ if (mode == 1) {
 } else if (mode == 4) {
     input_len = 4 ;
     no_guesses = 3 ;
+} else if (mode == 5) { //nibble++
+    input_len = 4 ;
+    no_guesses = 4 ;
 } else if (mode == 8) {
     input_len = 8 ;
     no_guesses = 3 ;
-} else if (mode == 9) {
+} else if (mode == 9) { // bytle++
     input_len = 8 ;
     no_guesses = 4 ;
 } 
