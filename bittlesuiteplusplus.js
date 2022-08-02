@@ -187,7 +187,7 @@ function checkGuess () {
                 } else { //falsePos == 1
                     letterColor = incorrectColor 
                 }
-                game_play += String.fromCodePoint(0x2610); // ballot-box empty square
+                game_play += "☹️"; // sad
             } else { // the normal case
                 letterColor = correctColor
                 game_play += String.fromCodePoint(0x1F7E9); //green square    
@@ -207,7 +207,7 @@ function checkGuess () {
                     } else { //falsePos == 1
                         letterColor = incorrectColor 
                     }
-                    game_play += String.fromCodePoint(0x2610); // ballot-box empty square
+                    game_play += "☹️"; // sad
                 } else { // the normal case
                     letterColor = semiCorrectColor
                     game_play += String.fromCodePoint(0x1F7E5); // red square
@@ -220,7 +220,7 @@ function checkGuess () {
                     } else { //falsePos == 1
                         letterColor = semiCorrectColor 
                     }
-                    game_play += String.fromCodePoint(0x2610); // ballot-box empty square
+                    game_play += "☹️"; // sad
                 } else { // the normal case
                     letterColor = incorrectColor 
                     game_play += String.fromCodePoint(0x2B1C); // black or white square
@@ -237,10 +237,10 @@ function checkGuess () {
             shadeKeyBoard(letter, letterColor)
         }, delay)
 
-        //setting a new false position
-        falseBox = (Math.floor(Math.random() * INPUT_LEN)).toString();
-
     }
+
+    //setting a new false position
+    falseBox = (Math.floor(Math.random() * INPUT_LEN)).toString();
 
     game_play += "<br/>";
 
