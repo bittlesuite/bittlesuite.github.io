@@ -168,7 +168,7 @@ function checkGuess () {
         }
     }
 
-    toastr.error("falsebox = " + falseBox)
+    // toastr.error("falsebox = " + falseBox)
 
     for (let i = 0; i < INPUT_LEN; i++) {
         let letterColor = ''
