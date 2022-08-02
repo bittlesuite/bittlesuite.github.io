@@ -175,9 +175,15 @@ function checkGuess () {
         
         //MY V4
 
-        if (currentGuess[i] == rightGuess[i]) {
+        if (currentGuess[i] == rightGuess[i]) { //CORRECT
             if (i == falseBox && canFlagBeSet) { // the falseBox case
-                falseBoxChooser(semiCorrectColor, incorrectColor) ;
+                // falseBoxChooser(semiCorrectColor, incorrectColor) ;
+                if (falsePos == 0) {
+                    letterColor = semiCorrectColor
+                } else { //falsePos == 1
+                    letterColor = incorrectColor 
+                }
+                game_play += String.fromCodePoint(0x2610); // ballot-box empty square
             } else { // the normal case
                 letterColor = correctColor
                 game_play += String.fromCodePoint(0x1F7E9); //green square    
@@ -189,16 +195,28 @@ function checkGuess () {
                     flag1 = true ;
                 }
             }
-            if(flag1) {
+            if(flag1) { //SEMICORRECT 
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
-                    falseBoxChooser(correctColor, incorrectColor) ;
+                    // falseBoxChooser(correctColor, incorrectColor) ;
+                    if (falsePos == 0) {
+                        letterColor = correctColor
+                    } else { //falsePos == 1
+                        letterColor = incorrectColor 
+                    }
+                    game_play += String.fromCodePoint(0x2610); // ballot-box empty square
                 } else { // the normal case
                     letterColor = semiCorrectColor
                     game_play += String.fromCodePoint(0x1F7E5); // red square
                 }
-            } else {
+            } else { //INCORRECT
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
-                    falseBoxChooser(correctColor, semiCorrectColor) ;
+                    // falseBoxChooser(correctColor, semiCorrectColor) ;
+                    if (falsePos == 0) {
+                        letterColor = correctColor
+                    } else { //falsePos == 1
+                        letterColor = semiCorrectColor 
+                    }
+                    game_play += String.fromCodePoint(0x2610); // ballot-box empty square
                 } else { // the normal case
                     letterColor = incorrectColor 
                     game_play += String.fromCodePoint(0x2B1C); // black or white square
@@ -268,14 +286,14 @@ function checkGuess () {
     }
 }
 
-function falseBoxChooser(color1, color2) {
-    if (falsePos == 0) {
-        letterColor = color1
-    } else { //falsePos == 1
-        letterColor = color2 
-    }
-    game_play += String.fromCodePoint(2610); // ballot-box empty square
-}
+// function falseBoxChooser(color1, color2) {
+//     if (falsePos == 0) {
+//         letterColor = color1
+//     } else { //falsePos == 1
+//         letterColor = color2 
+//     }
+//     game_play += String.fromCodePoint(2610); // ballot-box empty square
+// }
 
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
