@@ -286,7 +286,8 @@ function checkGuess () {
                 + game_play
                 + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
                 + "</div>"
-                + "share your game by copying the above text!";
+                + "share your game by copying the above text!<br>";
+                + "note that the shareable section above uses circles to show the mis-represented bits during your game";
 
         }
     }
