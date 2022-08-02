@@ -10,6 +10,9 @@ if (mode == 1) {
 } else if (mode == 8) {
     input_len = 8 ;
     no_guesses = 3 ;
+} else if (mode == 9) {
+    input_len = 8 ;
+    no_guesses = 4 ;
 } 
 
 const INPUT_LEN = input_len
