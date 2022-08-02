@@ -221,7 +221,7 @@ function checkGuess () {
             } else { //INCORRECT
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
                     letterColor = correctColor
-                    game_play += String.fromCodePoint(0x25CB); // white circle
+                    game_play += String.fromCodePoint(0x26AA); // white circle
                 } else { // the normal case
                     letterColor = incorrectColor 
                     game_play += String.fromCodePoint(0x2B1C); // white square
