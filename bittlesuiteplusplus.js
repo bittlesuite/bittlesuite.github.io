@@ -168,17 +168,14 @@ function checkGuess () {
         }
     }
 
+    toastr.error("falsebox = " + falseBox)
+
     for (let i = 0; i < INPUT_LEN; i++) {
         let letterColor = ''
         let box = row.children[i]
         let letter = currentGuess[i]
         
         //MY V4
-
-        if (i == falseBox) {
-            toastr.error("i = falsebox = " + falseBox)
-        }
-
         if (currentGuess[i] == rightGuess[i]) { //CORRECT
             if (i == falseBox && canFlagBeSet) { // the falseBox case
                 // falseBoxChooser(semiCorrectColor, incorrectColor) ;
@@ -290,6 +287,7 @@ function checkGuess () {
     }
 }
 
+// make it into a function in the future, idk about var scopes in js for now...
 // function falseBoxChooser(color1, color2) {
 //     if (falsePos == 0) {
 //         letterColor = color1
