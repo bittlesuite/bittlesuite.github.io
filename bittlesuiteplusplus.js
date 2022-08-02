@@ -6,7 +6,7 @@ if (mode == 1) {
     no_guesses = 3 ;
 } else if (mode == 3) { //crumble++ (2+1 = 3)
     input_len = 2 ;
-    no_guesses = 4 ;
+    no_guesses = 3 ;
 } else if (mode == 4) {
     input_len = 4 ;
     no_guesses = 3 ;
