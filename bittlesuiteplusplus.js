@@ -175,6 +175,10 @@ function checkGuess () {
         
         //MY V4
 
+        if (i == falseBox) {
+            toastr.error("i = falsebox = " + falseBox)
+        }
+
         if (currentGuess[i] == rightGuess[i]) { //CORRECT
             if (i == falseBox && canFlagBeSet) { // the falseBox case
                 // falseBoxChooser(semiCorrectColor, incorrectColor) ;
