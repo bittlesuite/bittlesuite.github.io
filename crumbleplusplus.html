@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nibble</title>
+        <link rel="icon" type="image/x-icon" href="/images/bittlepfp.jpg">
+        <link rel="stylesheet" href="bittlesuite.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script defer src="pgcnt.js"></script>
+        <link rel="stylesheet" href="pgcnt.css"/>
+    </head>
+    <body style="background-color:#543B6E">
+        <nav>
+            <a href="index">Home</a>
+            &bull;
+            <a href="crumbleplusplus">Play Again</a>
+        </nav>
+
+        <div style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+            <div class="pg-counter"></div>
+          </div>
+        
+        <h1> Bittle Suite </h1>
+        <h2> Crumble++ </h2>
+    
+        <div id="game-board" style="color:#F2F5FC" ></div>
+    
+        <div id="keyboard-cont" >
+        <div class="first-row">
+            <button class="keyboard-button">Del</button>
+            <button class="keyboard-button">0</button>
+            <button class="keyboard-button">1</button>
+            <button class="keyboard-button">Enter</button>
+        </div>
+        </div>
+
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="bittlesuiteplusplus.js" type="module" data=3
+        href="#" id="bittlesuite">
+        </script>
+
+        <div>
+            <!-- <p>Share your game! Copy the text below after you finish playing!</p> -->
+            <p id="game"></p>
+        </div>
+
+        <p style="color:#F2F5FC">How to play: 2 bits make a crumb! Enter 0's and 1's. <br>
+            <!-- Hint: square colorings may obfuscate! <br> -->
+            <a style="color:darkseagreen">green: correct bit, correct placement</a><br>
+            <a style="color:lightcoral">pink: correct bit, incorrect placement </a><br>
+            <a style="color:lightgrey">grey: bit not in crumb </a><br>
+        </p>
+        <p style="color:#F2F5FC">
+            In this mode, ONE of the bits will be RANDOMLY CHOSEN to display an INCORRECT color;
+              the OPPOSITE of what it should be colored. <br>
+            For example, a correct bit in the correct spot should be colored green, 
+              but in this mode may be colored pink or grey. <br>
+            A different (since it's random, it may be the same) bit will be chosen to be
+              represented INCORRECTLY in the subsequent row until the correct crumb is entered. <br>
+            Good luck playing this mode, and getting it right within the given 4 tries!!
+        </p>
+
+    </body>
+</html>
+
+<style>
+    h1 {color:#F2F5FC}
+    h2 {color:#F2F5FC}
+    a {color:rgb(194, 239, 239)}
+    p {color:rgb(205, 244, 215);}
+</style>
