@@ -55,8 +55,14 @@ document.getElementById("game").innerHTML = "";
 var game_play = "" ;
 if (mode == 1) {
     game_play += "bittle! <br/>" ;
+} else if (mode == 3) {
+    game_play += "crumble++! <br/>" ;
 } else if (mode == 4) {
     game_play += "nibble! <br/>" ;
+} else if (mode == 5) {
+    game_play += "nibble++! <br/>" ;
+} else if (mode == 9) {
+    game_play += "bytle++! <br/>" ;
 } else {//if (mode == 8) 
     game_play += "bytle! <br/>" ;
 }
