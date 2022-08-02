@@ -183,7 +183,7 @@ function checkGuess () {
                 } else { //falsePos == 1
                     letterColor = incorrectColor 
                 }
-                game_play += "☹️"; // sad
+                game_play += String.fromCodePoint(0x1F7E2); //green circle    
             } else { // the normal case
                 letterColor = correctColor
                 game_play += String.fromCodePoint(0x1F7E9); //green square    
@@ -198,7 +198,7 @@ function checkGuess () {
             if(flag1) { //SEMICORRECT 
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
                     letterColor = correctColor
-                    game_play += "☹️"; // sad
+                    game_play += String.fromCodePoint(0x1F534); // red circle
                 } else { // the normal case
                     letterColor = semiCorrectColor
                     game_play += String.fromCodePoint(0x1F7E5); // red square
@@ -206,10 +206,10 @@ function checkGuess () {
             } else { //INCORRECT
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
                     letterColor = correctColor
-                    game_play += "☹️"; // sad
+                    game_play += String.fromCodePoint(0x25CB); // white circle
                 } else { // the normal case
                     letterColor = incorrectColor 
-                    game_play += String.fromCodePoint(0x2B1C); // black or white square
+                    game_play += String.fromCodePoint(0x2B1C); // white square
                 }
             }
         }
