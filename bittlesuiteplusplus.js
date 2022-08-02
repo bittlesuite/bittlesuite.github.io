@@ -178,7 +178,6 @@ function checkGuess () {
         //MY V4
         if (currentGuess[i] == rightGuess[i]) { //CORRECT
             if (i == falseBox && canFlagBeSet) { // the falseBox case
-                // falseBoxChooser(semiCorrectColor, incorrectColor) ;
                 if (falsePos == 0) {
                     letterColor = semiCorrectColor
                 } else { //falsePos == 1
@@ -198,12 +197,7 @@ function checkGuess () {
             }
             if(flag1) { //SEMICORRECT 
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
-                    // falseBoxChooser(correctColor, incorrectColor) ;
-                    if (falsePos == 0) {
-                        letterColor = correctColor
-                    } else { //falsePos == 1
-                        letterColor = incorrectColor 
-                    }
+                    letterColor = correctColor
                     game_play += "☹️"; // sad
                 } else { // the normal case
                     letterColor = semiCorrectColor
@@ -211,12 +205,7 @@ function checkGuess () {
                 }
             } else { //INCORRECT
                 if (i == falseBox && canFlagBeSet) { // the falseBox case
-                    // falseBoxChooser(correctColor, semiCorrectColor) ;
-                    if (falsePos == 0) {
-                        letterColor = correctColor
-                    } else { //falsePos == 1
-                        letterColor = semiCorrectColor 
-                    }
+                    letterColor = correctColor
                     game_play += "☹️"; // sad
                 } else { // the normal case
                     letterColor = incorrectColor 
@@ -286,16 +275,6 @@ function checkGuess () {
         }
     }
 }
-
-// make it into a function in the future, idk about var scopes in js for now...
-// function falseBoxChooser(color1, color2) {
-//     if (falsePos == 0) {
-//         letterColor = color1
-//     } else { //falsePos == 1
-//         letterColor = color2 
-//     }
-//     game_play += String.fromCodePoint(2610); // ballot-box empty square
-// }
 
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
