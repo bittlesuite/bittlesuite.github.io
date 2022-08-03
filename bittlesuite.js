@@ -143,7 +143,7 @@ function checkGuess () {
     }
 
     if (guessString.length != INPUT_LEN) {
-        toastr.error("Not enough letters!")
+        toastr.error("Not enough bits!")
         return
     }
 
