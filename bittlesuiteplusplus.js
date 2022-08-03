@@ -271,7 +271,7 @@ function checkGuess () {
             game_play += "note that the shareable section above uses circles to show the mis-represented bits";
 
         }
-          
+        
         // giving string of game play - IN PROGRESS
         document.getElementById("game").innerHTML = game_play ;
 
@@ -295,7 +295,7 @@ function checkGuess () {
                         + "</div>"
                         + "share your game by copying the above text!<br>" ;
             if (pluplusmode){
-                game_play += "note that the shareable section above uses circles to show the mis-represented bits during your game";
+                game_play += "note: the shareable section above uses circles to show the mis-represented bits during your game";
             }
             // giving string of game play - IN PROGRESS
             document.getElementById("game").innerHTML = game_play ;
