@@ -268,7 +268,7 @@ function checkGuess () {
                     + "</div>"
                     + "share your game by copying the above text!<br>" ;
         if (plusplusmode) {
-            game_play += "note that the shareable section above uses circles to show the mis-represented bits";
+            game_play += "note: the shareable section above uses circles to show the mis-represented bits";
 
         }
         
