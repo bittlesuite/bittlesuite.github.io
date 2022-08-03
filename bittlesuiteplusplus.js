@@ -1,19 +1,21 @@
 var mode = $('#bittlesuite').attr('data');
+
 var input_len = 1 ;
 var no_guesses = 1 ;
-if (mode == 1) {
+
+if (mode == 1) { // bittle
     input_len = 1 ;
     no_guesses = 3 ;
 } else if (mode == 3) { //crumble++ (2+1 = 3)
     input_len = 2 ;
     no_guesses = 3 ;
-} else if (mode == 4) {
+} else if (mode == 4) { // nibble
     input_len = 4 ;
     no_guesses = 3 ;
 } else if (mode == 5) { //nibble++
     input_len = 4 ;
     no_guesses = 4 ;
-} else if (mode == 8) {
+} else if (mode == 8) { // bytle
     input_len = 8 ;
     no_guesses = 3 ;
 } else if (mode == 9) { // bytle++
@@ -24,8 +26,6 @@ if (mode == 1) {
 const INPUT_LEN = input_len
 const NUMBER_OF_GUESSES = no_guesses ;
 
-// toastr.info("val accepted from bytle html data: " + INPUT_LEN + " " + NUMBER_OF_GUESSES)
-
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
@@ -34,23 +34,7 @@ const correctColor = 'darkseagreen'
 const semiCorrectColor = 'lightcoral'
 const incorrectColor = 'lightgrey'
 
-// 8 characters
-let rightGuessString = (Math.floor(Math.random() * 2)).toString();
-for (let i = 0; i < INPUT_LEN-1; i++) {
-    rightGuessString += (Math.floor(Math.random() * 2)).toString();
-}
-
-// falseBox gives 0, 1, 2, 3, 4, 5, 6, 7 pos of the falsely labeled box
-let falseBox = (Math.floor(Math.random() * INPUT_LEN)).toString();
-// falsePos gives which of the alternative 2 positions (correct, 
-//    semi correct, incorrect) that the falseBox should be colored in
-let falsePos = (Math.floor(Math.random() * 2)).toString();
-// canFlagBeSet is false if guess is completly correct
-let canFlagBeSet = true ;
-
-console.log(rightGuessString)
-
-//giving string of game play 
+//adding title of gameplay to game-ending string
 document.getElementById("game").innerHTML = "";
 var game_play = "" ;
 if (mode == 1) {
@@ -66,6 +50,29 @@ if (mode == 1) {
 } else {//if (mode == 8) 
     game_play += "bytle! <br/>" ;
 }
+
+
+//dealing with whether the game is in plusplus mode or not
+let plusplusmode = false ;
+if (mode == 3 || mode == 5 || mode == 9) {
+    plusplusmode = true ;
+}
+
+// generating the string of 0's and 1's for the answer
+let rightGuessString = (Math.floor(Math.random() * 2)).toString();
+for (let i = 0; i < INPUT_LEN-1; i++) {
+    rightGuessString += (Math.floor(Math.random() * 2)).toString();
+}
+
+// falseBox gives 0, 1, 2, 3, 4, 5, 6, 7 pos of the falsely labeled box
+let falseBox = (Math.floor(Math.random() * INPUT_LEN)).toString();
+// falsePos gives which of the alternative 2 positions (correct, 
+//    semi correct, incorrect) that the falseBox should be colored in
+let falsePos = (Math.floor(Math.random() * 2)).toString();
+// canFlagBeSet is false if guess is completly correct
+let canFlagBeSet = true ;
+
+console.log(rightGuessString)
 
 initBoard()
 
@@ -171,7 +178,7 @@ function checkGuess () {
     }
 
     // for flag for false box
-    if (guessString === rightGuessString) {
+    if (plusplusmode && (guessString === rightGuessString)) {
         canFlagBeSet = false ;
     }
 
@@ -183,8 +190,6 @@ function checkGuess () {
         }
     }
 
-    // toastr.error("falsebox = " + falseBox)
-
     for (let i = 0; i < INPUT_LEN; i++) {
         let letterColor = ''
         let box = row.children[i]
@@ -192,7 +197,7 @@ function checkGuess () {
         
         //MY V4
         if (currentGuess[i] == rightGuess[i]) { //CORRECT
-            if (i == falseBox && canFlagBeSet) { // the falseBox case
+            if (plusplusmode && i == falseBox && canFlagBeSet) { // the falseBox case
                 if (falsePos == 0) {
                     letterColor = semiCorrectColor
                 } else { //falsePos == 1
@@ -211,7 +216,7 @@ function checkGuess () {
                 }
             }
             if(flag1) { //SEMICORRECT 
-                if (i == falseBox && canFlagBeSet) { // the falseBox case
+                if (plusplusmode && i == falseBox && canFlagBeSet) { // the falseBox case
                     letterColor = correctColor
                     game_play += String.fromCodePoint(0x1F534); // red circle
                 } else { // the normal case
@@ -219,7 +224,7 @@ function checkGuess () {
                     game_play += String.fromCodePoint(0x1F7E5); // red square
                 }
             } else { //INCORRECT
-                if (i == falseBox && canFlagBeSet) { // the falseBox case
+                if (plusplusmode && i == falseBox && canFlagBeSet) { // the falseBox case
                     letterColor = correctColor
                     game_play += String.fromCodePoint(0x26AA); // white circle
                 } else { // the normal case
@@ -263,7 +268,7 @@ function checkGuess () {
             + game_play
             + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
             + "</div>"
-            + "share your game by copying the above text!<br>";
+            + "share your game by copying the above text!<br>"
             + "note that the shareable section above uses circles to show the mis-represented bits";
 
         guessesRemaining = 0
@@ -286,7 +291,7 @@ function checkGuess () {
                 + game_play
                 + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
                 + "</div>"
-                + "share your game by copying the above text!<br>";
+                + "share your game by copying the above text!<br>"
                 + "note that the shareable section above uses circles to show the mis-represented bits during your game";
 
         }
