@@ -260,16 +260,20 @@ function checkGuess () {
         } else if (guessesRemaining == 1) {
             toastr.success("Phew!")
         }
+
+        game_play = "<div style=\"background-color:lightcoral\">"
+                    + "win 😊 @ " 
+                    + game_play
+                    + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+                    + "</div>"
+                    + "share your game by copying the above text!<br>" ;
+        if (plusplusmode) {
+            game_play += "note that the shareable section above uses circles to show the mis-represented bits";
+
+        }
           
         // giving string of game play - IN PROGRESS
-        document.getElementById("game").innerHTML = 
-            "<div style=\"background-color:lightcoral\">"
-            + "win 😊 @ " 
-            + game_play
-            + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
-            + "</div>"
-            + "share your game by copying the above text!<br>"
-            + "note that the shareable section above uses circles to show the mis-represented bits";
+        document.getElementById("game").innerHTML = game_play ;
 
         guessesRemaining = 0
         return
@@ -284,15 +288,17 @@ function checkGuess () {
                 `The correct byte was: "${rightGuessString}"`
             )
 
+            game_play = "<div style=\"background-color:lightcoral\">"
+                        + "loss ☹️ @ " 
+                        + game_play
+                        + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+                        + "</div>"
+                        + "share your game by copying the above text!<br>" ;
+            if (pluplusmode){
+                game_play += "note that the shareable section above uses circles to show the mis-represented bits during your game";
+            }
             // giving string of game play - IN PROGRESS
-            document.getElementById("game").innerHTML = 
-                "<div style=\"background-color:lightcoral\">"
-                + "loss ☹️ @ " 
-                + game_play
-                + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
-                + "</div>"
-                + "share your game by copying the above text!<br>"
-                + "note that the shareable section above uses circles to show the mis-represented bits during your game";
+            document.getElementById("game").innerHTML = game_play ;
 
         }
     }
