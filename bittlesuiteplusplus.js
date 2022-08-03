@@ -288,13 +288,14 @@ function checkGuess () {
             )
 
             game_play = "<div style=\"background-color:lightcoral\">"
-                        + "loss ☹️ @ " 
-                        + game_play
-                        + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
-                        + "</div>"
-                        + "share your game by copying the above text!<br>" ;
-            if (plusplusmode){
-                game_play += "note: the shareable section above uses circles to show the mis-represented bits during your game";
+                    + "loss ☹️ @ " 
+                    + game_play
+                    + "<a style=\"color:rgb(194, 239, 239)\" href=\"https://bittlesuite.github.io\">https://bittlesuite.github.io</a> <br/>"
+                    + "</div>"
+                    + "share your game by copying the above text!<br>" ;
+            if (plusplusmode) {
+                game_play += "note: the shareable section above uses circles to show the mis-represented bits";
+
             }
 
             document.getElementById("game").innerHTML = game_play ;
@@ -345,81 +346,3 @@ function copyGame() {
     alert('copy over game');
     navigator.clipboard.writeText(game_play);
 }
-
-//////////////////////////////////////old logic in "checkGuess()" for loop
-
-        //MY V3 -- accurate feedback
-        // if (currentGuess[i] == rightGuess[i]) {
-        //     letterColor = correctColor
-        //     toastr.info("correctcolor!")
-        // } else {
-        //     let flag1 = false ;
-        //     for (let m = i+1; m < INPUT_LEN; m++) {
-        //         if (currentGuess[i] == rightGuess[m] && box_clr_fill[m] == "") {
-        //             flag1 = true ;
-        //         }
-        //     }
-        //     if(flag1) {
-        //         toastr.info("semicorrectcolor!")
-        //         letterColor = semiCorrectColor
-        //     } else {
-        //         toastr.info("incorrectcolor!")
-        //         letterColor = incorrectColor 
-        //     }
-        // }
-        // let delay = 250 * i
-        // setTimeout(()=> {
-        //     //flip box
-        //     animateCSS(box, 'flipInX')
-        //     //shade box
-        //     box.style.backgroundColor = letterColor
-        //     shadeKeyBoard(letter, letterColor)
-        // }, delay)
-
-        //MY V2 - only grey and green
-        // if (currentGuess[i] == rightGuess[i]) {
-        //     letterColor = correctColor
-        // } 
-        // else {
-        //     let flag = false
-        //     for (let j = i; j < INPUT_LEN; j++) {
-        //         if (currentGuess[i] == rightGuess[j]) {
-        //             flag = true
-        //         }
-        //     }
-        //     if(flag = true) {
-        //         toastr.info("semicorrectcolor!")
-        //         letterColor = semiCorrectColor
-        //     } else {
-        //         toastr.info("incorrectcolor!")
-        //         letterColor = incorrectColor 
-        //     }
-        // }
-
-        //MY V1 - inaccurate feedback; fun to play
-        // // todo: edit my logic
-        // if (currentGuess[i] == rightGuess[i]) {
-        //     letterColor = correctColor
-        //     rightGuess[letterPosition] = "#"
-        // } else if (letterPosition == -1) {
-        //     letterColor = incorrectColor
-        // } else {
-        //     letterColor = semiCorrectColor
-        //     rightGuess[letterPosition] = "#"
-        // }
-
-        //GIVEN VERSION - ? like my v1
-        // // is letter in the correct guess
-        // if (letterPosition === -1) {
-        //     letterColor = incorrectColor
-        // } else {
-        //     // now, letter is definitely in word
-        //     // if letter index and right guess index are the same
-        //     // letter is in the right position 
-        //     if (currentGuess[i] == rightGuess[i]) {
-        //         letterColor = correctColor
-        //     } else {
-        //         letterColor = semiCorrectColor
-        //     }
-        //     rightGuess[letterPosition] = "#"
-        // }
