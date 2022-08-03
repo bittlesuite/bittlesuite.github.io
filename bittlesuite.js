@@ -259,7 +259,7 @@ function shadeKeyBoard(letter, color) {
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
-  // We create a Promise and return it
+  // we create a Promise and return it
   new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
     // const node = document.querySelector(element);
