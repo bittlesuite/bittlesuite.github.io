@@ -99,7 +99,6 @@ document.addEventListener("keyup", (e) => {
         toastr.error("Not an accepted input. Please enter 0 or 1")
         return
     }
-    //todo: consider  if (pressedKey.toString() == " ")
 
 })
 
