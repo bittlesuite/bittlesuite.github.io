@@ -8,5 +8,3 @@ I used to play wordle a bit - not as much as some of my peers. I thought wordle 
 A few of my friends mentioned they liked it: that bittle was silly and a great joke. But the issue with Bittle was that, while it delivered my joke, there was no motivation to keep playing the game; no challenge. On wordle, the inspiration and drive that people have for completing a phrase seemed so intrinsic. The trickier the word, the more intriguing the puzzle was. So I ++'ed the difficulty. Crumble++, Nibble++, and Bytle++ fool the player unpredictably. Guessing the unpredictable sequence of bits, with some lies and some truths - that version of the game caught on. Before I knew it, people were playing every day.
 
 Enjoy the suite of bit-guessing! :) 
-
-MIT License
